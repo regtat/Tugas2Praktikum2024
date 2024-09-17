@@ -1,7 +1,9 @@
 # Tugas Pertemuan 2
 
 Nama : Regita Maulia Gani Nur Rahman
+
 NIM : H1D022021
+
 Shift Baru: C
 
 # Penjelasan
