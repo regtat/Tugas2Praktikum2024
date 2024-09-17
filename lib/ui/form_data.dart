@@ -18,14 +18,18 @@ class FormDataState extends State<FormData> {
     return Scaffold(
       appBar: AppBar(
         title: const Text("Input Data"),
+        backgroundColor: const Color.fromARGB(255, 141, 181, 249),
       ),
       body: Container(
         margin: const EdgeInsets.all(10),
         child: Column(
           children: [
             _textboxNama(),
+            const SizedBox(height: 20),
             _textboxNIM(),
+            const SizedBox(height: 20),
             _textboxTahun(),
+            const SizedBox(height: 20),
             _tombolSimpan()
           ],
         ),
@@ -35,21 +39,54 @@ class FormDataState extends State<FormData> {
 
   _textboxNama() {
     return TextField(
-      decoration: const InputDecoration(labelText: "Nama"),
+      decoration: const InputDecoration(labelText: "Nama",
+      border: OutlineInputBorder(
+        borderSide: BorderSide(color: Colors.blueAccent),
+      ),
+      focusedBorder: OutlineInputBorder(
+        borderSide: BorderSide(color: Colors.blueAccent),
+      ),
+      enabledBorder: OutlineInputBorder(
+        borderSide: BorderSide(color: Colors.blueAccent),
+      ),
+      labelStyle: TextStyle(color: Colors.black),
+      ),
       controller: _namaController,
     );
   }
 
   _textboxNIM() {
     return TextField(
-      decoration: const InputDecoration(labelText: "NIM"),
+      decoration: const InputDecoration(labelText: "NIM",
+      border: OutlineInputBorder(
+        borderSide: BorderSide(color: Colors.blueAccent),
+      ),
+      focusedBorder: OutlineInputBorder(
+        borderSide: BorderSide(color: Colors.blueAccent),
+      ),
+      enabledBorder: OutlineInputBorder(
+        borderSide: BorderSide(color: Colors.blueAccent),
+      ),
+      labelStyle: TextStyle(color: Colors.black),
+      ),
       controller: _nimController,
     );
   }
 
   _textboxTahun() {
     return TextField(
-      decoration: const InputDecoration(labelText: "Tahun Lahir"),
+      decoration: const InputDecoration(labelText: "Tahun Lahir",
+      border: OutlineInputBorder(
+        borderSide: BorderSide(color: Colors.blueAccent),
+      ),
+      focusedBorder: OutlineInputBorder(
+        borderSide: BorderSide(color: Colors.blueAccent),
+      ),
+      enabledBorder: OutlineInputBorder(
+        borderSide: BorderSide(color: Colors.blueAccent),
+      ),
+      labelStyle: TextStyle(color: Colors.black),
+      ),
       controller: _tahunController,
     );
   }
@@ -64,6 +101,9 @@ class FormDataState extends State<FormData> {
               builder: (context) =>
                   TampilData(nama: nama, nim: nim, tahun: tahun)));
         },
+        style: ElevatedButton.styleFrom(
+          foregroundColor: Colors.blueAccent,
+        ),
         child: const Text('Simpan'));
   }
 }
